@@ -956,6 +956,9 @@
     "/distill/": [
         "nczitzk"
     ],
+    "/dmzj/news/:category?": [
+        "vzz64"
+    ],
     "/dockerhub/build/:owner/:image/:tag?": [
         "HenryQW"
     ],
@@ -1726,6 +1729,9 @@
     "/gov/xuzhou/hrss/:category?": [
         "nczitzk"
     ],
+    "/gq/tw/:caty?/:subcaty?": [
+        "nczitzk"
+    ],
     "/greasyfork/:language/:domain?": [
         "imlonghao",
         "miles170"
@@ -1954,6 +1960,9 @@
         "nczitzk"
     ],
     "/hotukdeals/:type": [
+        "DIYgod"
+    ],
+    "/hotukdeals/hottest": [
         "DIYgod"
     ],
     "/houxu/events": [
@@ -4615,6 +4624,9 @@
         "LogicJake",
         "nczitzk"
     ],
+    "/yxrb/:category?": [
+        "TonyRL"
+    ],
     "/yyets/article/:type?": [
         "wb121017405"
     ],
@@ -5823,7 +5835,6 @@
     "/feixuew/:id?": [],
     "/1x/:category?": [],
     "/jx3/:caty?": [],
-    "/gq/tw/:caty?/:subcaty?": [],
     "/qzcea/:caty?": [],
     "/fulinian/:caty?": [],
     "/cgtn/top": [],
