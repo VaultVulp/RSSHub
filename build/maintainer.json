@@ -272,6 +272,9 @@
     "/aamacau/aamacau/:category?/:id?": [
         "nczitzk"
     ],
+    "/abc/:category?": [
+        "nczitzk"
+    ],
     "/abmedia/abmedia/:category?": [
         "Fatpandac"
     ],
@@ -464,7 +467,7 @@
     "/app-center/release/:user/:app/:distribution_group": [
         "Rongronggg9"
     ],
-    "/apple/apps/update/:country/:id": [
+    "/apple/apps/update/:country/:id/:platform?": [
         "EkkoG",
         "nczitzk"
     ],
@@ -530,13 +533,19 @@
     "/asiantolick/": [
         "nczitzk"
     ],
-    "/asiantolick/category/:id?": [
+    "/asiantolick/category/:id": [
         "nczitzk"
     ],
-    "/asiantolick/tag/:id?": [
+    "/asiantolick/page/news": [
         "nczitzk"
     ],
-    "/asiantolick/search/:id?": [
+    "/asiantolick/page/:id": [
+        "nczitzk"
+    ],
+    "/asiantolick/search/:keyword": [
+        "nczitzk"
+    ],
+    "/asiantolick/tag/:id": [
         "nczitzk"
     ],
     "/asus/bios/:model": [
@@ -922,6 +931,9 @@
     "/bookfere/:category": [
         "OdinZhang"
     ],
+    "/booru/mmda/tags/:tags?": [
+        "N78Wy"
+    ],
     "/brave/latest": [
         "nczitzk"
     ],
@@ -993,6 +1005,9 @@
     ],
     "/caixin/:column/:category": [
         "idealclover"
+    ],
+    "/caixinglobal/latest": [
+        "TonyRL"
     ],
     "/camchina/:id?": [
         "nczitzk"
@@ -1145,6 +1160,9 @@
     ],
     "/chiculture/topic/:category?": [
         "nczitzk"
+    ],
+    "/china/finance/:category?": [
+        "KingJem"
     ],
     "/china/news/military": [
         "jiaaoMario"
@@ -1973,6 +1991,21 @@
     "/fantia/user/:id": [
         "nczitzk"
     ],
+    "/farmatters/exclusive/:locale?": [
+        "nczitzk"
+    ],
+    "/farmatters/news/:locale?": [
+        "nczitzk"
+    ],
+    "/farmatters/tag/:id/:locale?": [
+        "nczitzk"
+    ],
+    "/farmatters/wiki/:id/:locale?": [
+        "nczitzk"
+    ],
+    "/farmatters/:locale?": [
+        "nczitzk"
+    ],
     "/fastbull/express-news": [
         "nczitzk"
     ],
@@ -2431,6 +2464,9 @@
     ],
     "/gov/nopss/:path+": [
         "nczitzk"
+    ],
+    "/gov/npc/:caty": [
+        "233yeee"
     ],
     "/gov/nrta/news/:category?": [
         "yuxinliu-alex"
@@ -3824,6 +3860,16 @@
     "/meituclub/latest": [
         "ocleo1"
     ],
+    "/metacritic/game/:sort?/:filter?": [
+        "HenryQW",
+        "nczitzk"
+    ],
+    "/metacritic/movie/:sort?/:filter?": [
+        "nczitzk"
+    ],
+    "/metacritic/tv/:sort?/:filter?": [
+        "nczitzk"
+    ],
     "/meteor/boards": [
         "TonyRL"
     ],
@@ -3932,6 +3978,9 @@
     ],
     "/mygopen/:label?": [
         "nczitzk"
+    ],
+    "/mymusicsheet/user/sheets/:username/:iso?/:freeOnly?": [
+        "Freddd13"
     ],
     "/mysql/release/:version?": [
         "nczitzk"
@@ -4503,6 +4552,10 @@
     "/patagonia/patagonia/new-arrivals/:category": [
         "NavePnow"
     ],
+    "/paulgraham/articles": [
+        "Maecenas",
+        "nczitzk"
+    ],
     "/penguin-random-house/the-read-down": [
         "StevenRCE0"
     ],
@@ -4933,7 +4986,7 @@
     "/rfa/:language?/:channel?/:subChannel?": [
         "zphw"
     ],
-    "/rfi/news/:lang?": [
+    "/rfi/:path*": [
         "nczitzk"
     ],
     "/right/forum/:id?": [
@@ -5006,6 +5059,9 @@
     ],
     "/scau/yzb": [
         "shengmaosu"
+    ],
+    "/scau/yjsy": [
+        "Chunssu"
     ],
     "/science/blogs/:name?": [
         "TomHodson"
@@ -5909,6 +5965,15 @@
     "/tvb/news/:category?/:language?": [
         "nczitzk"
     ],
+    "/twitch/live/:login": [
+        "hoilc"
+    ],
+    "/twitch/video/:login/:filter?": [
+        "hoilc"
+    ],
+    "/twitch/schedule/:login": [
+        "hoilc"
+    ],
     "/twitter/collection/:uid/:collectionId/:routeParams?": [
         "TonyRL"
     ],
@@ -6326,8 +6391,12 @@
     "/whu/gs/:type?": [
         "Delreyaa"
     ],
-    "/whu/news/:type*": [
-        "SChen1024"
+    "/whu/hyxt/:category?": [
+        "nczitzk"
+    ],
+    "/whu/news/:category?": [
+        "SChen1024",
+        "nczitzk"
     ],
     "/wikinews/latest": [
         "KotoriK"
@@ -7289,7 +7358,6 @@
     "/005tv/zx/latest": [],
     "/polimi/news/:language?": [],
     "/dekudeals/:type": [],
-    "/metacritic/release/:platform/:type/:sort?": [],
     "/sixthtone/news": [],
     "/aiyanxishe/:id/:sort?": [],
     "/huodongxing/explore": [],
@@ -7449,7 +7517,6 @@
     "/aliyun-kernel/index": [],
     "/vulture/:tag/:excludetags?": [],
     "/xinwenlianbo/index": [],
-    "/blogs/paulgraham": [],
     "/invisionapp/inside-design": [],
     "/mlog-club/topics/:node": [],
     "/mlog-club/projects": [],
@@ -7713,7 +7780,6 @@
     "/aom/journal/:id": [],
     "/icity/:id": [],
     "/anki/changes": [],
-    "/abc/:id?": [],
     "/huawei/xinsheng/:caty?/:order?/:keyword?": [],
     "/ow/patch": [],
     "/cktest/app/:ctgroup?/:domain?": [],
@@ -7723,7 +7789,6 @@
     "/weforum/report/:lang?/:year?/:platform?": [],
     "/nobelprize/:caty?": [],
     "/gov/taiwan/mnd": [],
-    "/npc/:caty": [],
     "/ofweek/news": [],
     "/popyard/:caty?": [],
     "/wto/dispute-settlement/:year?": [],
