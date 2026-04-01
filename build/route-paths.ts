@@ -1764,6 +1764,7 @@ export type RoutePath =
   | `/lkong/forum/:id?/:digest?`
   | `/lkong/thread/:id`
   | `/lmu/jobs`
+  | `/locals/content/:community/:option1?/:option2?`
   | `/lofter/collection/:collectionID`
   | `/lofter/tag/:name?/:type?`
   | `/lofter/user/:name?`
@@ -2832,6 +2833,7 @@ export type RoutePath =
   | `/tvb/news/:category?/:language?`
   | `/tver/series/:id`
   | `/tvtropes/featured/:category?`
+  | `/tw-nongmu/market`
   | `/twitch/live/:login`
   | `/twitch/schedule/:login`
   | `/twitch/video/:login/:filter?`
@@ -3093,6 +3095,7 @@ export type RoutePath =
   | `/xueqiu/user/:id/:type?`
   | `/xueqiu/user_stock/:id`
   | `/xunhupay/blog`
+  | `/xupt/jyc/:type?`
   | `/xwenming/:category?`
   | `/xys/new`
   | `/xyu/index/tzgg`
