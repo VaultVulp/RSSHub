@@ -4384,9 +4384,6 @@
   "/hudsonrivertrading/blog/:section?": [
     "johan456789"
   ],
-  "/huggingface/activity/:user/likes": [
-    "dotwee"
-  ],
   "/huggingface/blog-community/:sort?": [
     "yuguorui"
   ],
