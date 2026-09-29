@@ -78930,6 +78930,53 @@ export default {
     "name": "The Korea Herald",
     "url": "koreaherald.com"
   },
+  "kosmofoto": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "picture"
+        ],
+        "view": 0,
+        "example": "/kosmofoto/news",
+        "parameters": {
+          "category": "Category slug, see the table below or the URL of a category page. All posts by default"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "kosmofoto.com/category/:category",
+              "kosmofoto.com/category/:parent/:category",
+              "kosmofoto.com/"
+            ]
+          }
+        ],
+        "name": "Posts",
+        "maintainers": [
+          "IvanWng97"
+        ],
+        "description": "The official feed only carries excerpts; this route returns the full post with all images.\n\n| Category           | Slug                   |\n| ------------------ | ---------------------- |\n| News               | `news`                 |\n| Film               | `film-2`               |\n| Featured           | `featured`             |\n| Analogue lifestyle | `analogue-lifestyle-2` |\n| Analogue Culture   | `analogue-culture`     |\n| Analogue History   | `analogue-history`     |\n| Camera reviews     | `camera-review-2`      |\n| Classic cameras    | `classic-cameras`      |\n| Vintage cameras    | `vintage-cameras`      |\n| Soviet cameras     | `soviet-cameras`       |\n| Lomography         | `lomography`           |\n| Kosmo Foto Mono    | `kosmo-foto-mono`      |",
+        "location": "index.tsx",
+        "module": () => import('@/routes/kosmofoto/index.tsx')
+      }
+    },
+    "apiRoutes": {},
+    "name": "Kosmo Foto",
+    "url": "kosmofoto.com",
+    "categories": [
+      "picture"
+    ],
+    "description": "Film photography news, camera reviews and analogue culture.",
+    "lang": "en"
+  },
   "kovidgoyal": {
     "routes": {
       "/kitty/changelog": {
@@ -126018,28 +126065,76 @@ export default {
                 "label": "全部"
               },
               {
-                "value": "4",
-                "label": "知行小酒馆"
+                "value": "1",
+                "label": "孟岩专栏"
               },
               {
                 "value": "2",
                 "label": "知行黑板报"
               },
               {
-                "value": "10",
-                "label": "无人知晓"
-              },
-              {
-                "value": "1",
-                "label": "孟岩专栏"
-              },
-              {
                 "value": "3",
                 "label": "知行读书会"
               },
               {
+                "value": "4",
+                "label": "知行小酒馆"
+              },
+              {
+                "value": "5",
+                "label": "保险专栏"
+              },
+              {
+                "value": "6",
+                "label": "知行头条"
+              },
+              {
+                "value": "7",
+                "label": "精选文章"
+              },
+              {
+                "value": "8",
+                "label": "一周新知"
+              },
+              {
+                "value": "9",
+                "label": "一周好想法"
+              },
+              {
+                "value": "10",
+                "label": "无人知晓"
+              },
+              {
                 "value": "11",
-                "label": "你好，同路人"
+                "label": "你好同路人"
+              },
+              {
+                "value": "13",
+                "label": "知行周报"
+              },
+              {
+                "value": "14",
+                "label": "有理有据"
+              },
+              {
+                "value": "15",
+                "label": "Ta 的投资故事"
+              },
+              {
+                "value": "16",
+                "label": "投资 ABC"
+              },
+              {
+                "value": "17",
+                "label": "海外投资Blog"
+              },
+              {
+                "value": "18",
+                "label": "中国大类资产投资年报"
+              },
+              {
+                "value": "19",
+                "label": "夸下海口"
               }
             ],
             "default": "0"
@@ -126068,7 +126163,7 @@ export default {
           "nczitzk"
         ],
         "url": "youzhiyouxing.cn/materials",
-        "description": "| 全部 | 知行小酒馆 | 知行黑板报 | 无人知晓 | 孟岩专栏 | 知行读书会 | 你好，同路人 |\n| :--: | :--------: | :--------: | :------: | :------: | :--------: | :----------: |\n|   0  |      4     |      2     |    10    |     1    |      3     |      11      |",
+        "description": "| 编号 | 栏目 |\n| :--: | :--- |\n| 0 | 全部 |\n| 1 | 孟岩专栏 |\n| 2 | 知行黑板报 |\n| 3 | 知行读书会 |\n| 4 | 知行小酒馆 |\n| 5 | 保险专栏 |\n| 6 | 知行头条 |\n| 7 | 精选文章 |\n| 8 | 一周新知 |\n| 9 | 一周好想法 |\n| 10 | 无人知晓 |\n| 11 | 你好同路人 |\n| 13 | 知行周报 |\n| 14 | 有理有据 |\n| 15 | Ta 的投资故事 |\n| 16 | 投资 ABC |\n| 17 | 海外投资Blog |\n| 18 | 中国大类资产投资年报 |\n| 19 | 夸下海口 |",
         "location": "materials.ts",
         "module": () => import('@/routes/youzhiyouxing/materials.ts')
       }
@@ -162482,36 +162577,6 @@ export default {
         "location": "custom.ts",
         "module": () => import('@/routes/youtube/custom.ts')
       },
-      "/live/:username/:embed?": {
-        "path": "/live/:username/:embed?",
-        "categories": [
-          "live"
-        ],
-        "example": "/youtube/live/@GawrGura",
-        "parameters": {
-          "username": "YouTuber id",
-          "embed": "Default to embed the video, set to any value to disable embedding"
-        },
-        "features": {
-          "requireConfig": [
-            {
-              "name": "YOUTUBE_KEY",
-              "description": "YouTube API Key (enable YouTube Data API v3), support multiple keys, split them with `,`, [API Key application](https://console.developers.google.com/), [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com)"
-            }
-          ],
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "name": "Live",
-        "maintainers": [
-          "sussurr127"
-        ],
-        "location": "live.ts",
-        "module": () => import('@/routes/youtube/live.ts')
-      },
       "/charts/:category?/:country?/:embed?": {
         "path": "/charts/:category?/:country?/:embed?",
         "categories": [
@@ -162618,6 +162683,35 @@ export default {
         "location": "channel.ts",
         "module": () => import('@/routes/youtube/channel.ts')
       },
+      "/live/:username/:embed?": {
+        "path": "/live/:username/:embed?",
+        "categories": [
+          "live"
+        ],
+        "view": 3,
+        "example": "/youtube/live/@GawrGura",
+        "parameters": {
+          "username": "YouTube handle or channel id",
+          "embed": "Default to embed the video, set to any value to disable embedding"
+        },
+        "radar": [
+          {
+            "source": [
+              "www.youtube.com/:username/streams",
+              "www.youtube.com/channel/:username/streams"
+            ],
+            "target": "/live/:username"
+          }
+        ],
+        "name": "Live",
+        "maintainers": [
+          "sussurr127",
+          "ouuan"
+        ],
+        "description": "::: tip\nEvery stream is categorized as `live`, `upcoming` or `completed`, so a single state can be picked out with the `filter_category` and `filterout_category` [common parameters](https://docs.rsshub.app/guide/parameters#filtering). For example, `/youtube/live/@GawrGura?filterout_category=completed` only tracks streams that are live or about to start.\n:::",
+        "location": "live.ts",
+        "module": () => import('@/routes/youtube/live.ts')
+      },
       "/playlist/:id/:embed?": {
         "path": "/playlist/:id/:embed?",
         "categories": [
@@ -162650,38 +162744,30 @@ export default {
         "location": "playlist.ts",
         "module": () => import('@/routes/youtube/playlist.ts')
       },
-      "/streams/:handle/:routeParams?": {
-        "path": "/streams/:handle/:routeParams?",
+      "/shows/:username": {
+        "path": "/shows/:username",
         "categories": [
-          "live"
+          "social-media"
         ],
-        "view": 3,
-        "example": "/youtube/streams/@GawrGura",
+        "example": "/youtube/shows/@LinusTechTips",
         "parameters": {
-          "handle": "YouTube handle or channel id",
-          "routeParams": "Extra parameters, see the table below"
+          "username": "YouTube handle or channel id"
         },
         "radar": [
           {
             "source": [
-              "www.youtube.com/@:handle/streams"
+              "www.youtube.com/:username/shows",
+              "www.youtube.com/channel/:username/shows"
             ],
-            "target": "/streams/@:handle"
-          },
-          {
-            "source": [
-              "www.youtube.com/channel/:handle/streams"
-            ],
-            "target": "/streams/:handle"
+            "target": "/shows/:username"
           }
         ],
-        "name": "Live Streams",
+        "name": "Shows",
         "maintainers": [
-          "ouuan"
+          "TonyRL"
         ],
-        "description": "::: tip Parameter\n\n| Name               | Description                                                                                 | Default |\n| ------------------ | ------------------------------------------------------------------------------------------- | ------- |\n| embed              | Whether to embed the video, fill in any value to disable embedding                          | embed   |\n| includeDescription | Whether to include the description of each stream, fill in any truthy value to include them | false   |\n\n:::\n\n::: tip\nUnlike [Live](#youtube-live), this route reads the channel's Live tab, so it also covers scheduled and finished streams, and it does not require an API key.\n\nEvery stream is categorized as `live`, `upcoming` or `completed`, so a single state can be picked out with the `filter_category` and `filterout_category` [common parameters](https://docs.rsshub.app/guide/parameters#filtering). For example, `/youtube/streams/@GawrGura?filterout_category=completed` only tracks streams that are live or about to start.\n\nThe Live tab does not carry the stream descriptions, so `includeDescription` costs one extra request per stream and is off by default.\n:::",
-        "location": "streams.ts",
-        "module": () => import('@/routes/youtube/streams.ts')
+        "location": "shows.ts",
+        "module": () => import('@/routes/youtube/shows.ts')
       },
       "/user/:username/:routeParams?": {
         "path": "/user/:username/:routeParams?",
